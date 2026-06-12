@@ -1,6 +1,7 @@
 services:
   back:
-    image: be-med-reminder
+    build:
+      context: .
     ports:
       - '3000:8000'
     env_file:

@@ -6,6 +6,8 @@ RUN bun install --production
 
 COPY . .
 
+RUN bunx --bun prisma generate
+
 RUN bun build src/index.ts \
     --compile \
     --target bun \
